@@ -1,4 +1,8 @@
-var finances = [
+/* Array With Two Data Sets: 
+   1) Months 
+   2) Profits/Losses
+*/
+var Finances = [
 ['Jan-2010', 867884],
 ['Feb-2010', 984655],
 ['Mar-2010', 322013],
@@ -86,3 +90,39 @@ var finances = [
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
+
+/* STEP ONE - Figure Out A Way To Seperate An Array Into The Two Different Fields Of Data:
+   1) Months
+   2) Profits/Losses
+*/
+
+/* STEP TWO - Figure Out A Way To Count The Number Of Months Included In The Dataset */
+
+/* STEP THREE - Figure Out A Way To Calculate The Net Total Amount Of Profit/Losses 
+   Manual Way Of Working It Out:
+   ** ADD Up Each Record Of The Profit/Losses Field **
+*/
+
+/* STEP FOUR - Figure Out A Way To Calculate The Average Change In Profit/Losses 
+   Manual Way Of Working It Out:
+   1) Calculate The Difference Between Each Field
+   2) Store This Information Somewhere
+   3) Add Up All The Differences In Profit/Losses
+   4) Divide By The Total Amount Of Losses
+*/
+
+/* STEP FIVE - Figure Out A Way To Calculate The Greatest Increase In Profit 
+   Identify By Both:
+   1) Date (Month/Year)
+   2) Amount
+*/
+
+/* STEP SIX - Figure Out A Way To Calculate The Greatest Decrease In Losses
+   Identify By Both:
+   1) Date (Month/Year)
+   2) Amount
+*/
+
+/* STEP SEVEN - Print Results Of Above Calculations To The Console */
+
+/* STEP EIGHT - Confirm Results Are Correct */
