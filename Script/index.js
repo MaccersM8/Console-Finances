@@ -91,41 +91,23 @@ var Finances = [
     ['Feb-2017', 671099]     // Data Group [85] Month [0] P/L [1]
 ];
 
-// STEP ONE - Figure Out A Way To Seperate An Array Into The Two Different Fields Of Data
-// Create An Empty Array For The Months Within The Finances Array To Go Into
+// STEP ONE PART ONE - Create An Empty Array For The Months Within The Finances Array To Go Into
 var FinancesMonths = []
-// Create A For Loop To Identify The Month In Each Group Of Data
-for (var GroupNumber = 0; GroupNumber < Finances.length; GroupNumber++) {
-    /* CODE TO TEST THE LOOP WORKS:
-    console.log(Finances[GroupNumber][0]);
-    */
-    // Push Finances Array Months Into New Array
+// STEP ONE PART TWO - Create A For Loop To Identify The Month In Each Group Of Data
+for (var GroupNumber = 0; GroupNumber < Finances.length; GroupNumber ++) {
+    // STEP ONE PART THREE - Push Finances Array Months Into New Array
     FinancesMonths.push(Finances[GroupNumber][0]);
-    /* CODE TO TEST THE PUSH WORKS:
-    console.log(FinancesMonths.length);
-    for (var A = 0; A < FinancesMonths.length; A ++) {
-        console.log(FinancesMonths[A]);
-    } */ 
 }
-// Create An Empty Array For The Profits/Losses Within The Finances Array To Go Into
+// STEP ONE PART FOUR - Create An Empty Array For The Profits/Losses Within The Finances Array To Go Into
 var FinancesProfits = []
-// Create A For Loop To Identify The Profit/Loss In Each Group Of Data
-for (var GroupNumber = 0; GroupNumber < Finances.length; GroupNumber++) {
-    /* CODE TO TEST THE LOOP WORKS:
-    console.log(Finances[GroupNumber][1]);
-    */
-    // Push Finances Array Profits/Losses Into New Array
+// STEP ONE PART FIVE - Create A For Loop To Identify The Profit/Loss In Each Group Of Data
+for (var GroupNumber = 0; GroupNumber < Finances.length; GroupNumber ++) {
+    // STEP ONE PART SIX - Push Finances Array Profits/Losses Into New Array
     FinancesProfits.push(Finances[GroupNumber][1]);
-    /* CODE TO TEST THE PUSH WORKS:
-    console.log(FinancesProfits.length);
-    for (var A = 0; A < Finances.Profits.length; A ++) {
-        console.log(FinancesProfits[A]);
-    } */
 }
 
-/* STEP TWO - Figure Out A Way To Count The Number Of Months Included In The Dataset 
-   EXPECTED OUTCOME = 86
-*/
+// STEP TWO PART ONE - Create A New Variable To Store The Number Of Months In The Data Set "Months"
+var TotalMonths = FinancesMonths.length;
 
 /* STEP THREE - Figure Out A Way To Calculate The Net Total Amount Of Profit/Losses 
    Manual Way Of Working It Out:
