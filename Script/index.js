@@ -109,10 +109,12 @@ for (var GroupNumber = 0; GroupNumber < Finances.length; GroupNumber ++) {
 // STEP TWO PART ONE - Create A New Variable To Store The Number Of Months In The Data Set "Months"
 var TotalMonths = FinancesMonths.length;
 
-/* STEP THREE - Figure Out A Way To Calculate The Net Total Amount Of Profit/Losses 
-   Manual Way Of Working It Out:
-   ** ADD Up Each Record Of The Profit/Losses Field **
-*/
+// STEP THREE PART ONE - Create A Variable For The Sum Of Profit/Losses
+var ProfitSum = 0;
+// STEP THREE PART TWO - Create A For Loop To Add Up The Profits/Losses
+for (var ArrayNumber = 0; ArrayNumber < FinancesProfits.length; ArrayNumber ++ ) {
+    ProfitSum += FinancesProfits[ArrayNumber];
+}
 
 /* STEP FOUR - Figure Out A Way To Calculate The Average Change In Profit/Losses 
    Manual Way Of Working It Out:
