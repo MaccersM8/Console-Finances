@@ -1,7 +1,4 @@
-/* Array With Two Data Sets: 
-   1) Months 
-   2) Profits/Losses
-*/
+// STARTER CODE - Array With Month And Profit/Loss Data
 var Finances = [
     ['Jan-2010', 867884],    // Data Group [00] Month [0] P/L [1]
     ['Feb-2010', 984655],    // Data Group [01] Month [0] P/L [1]
@@ -141,7 +138,7 @@ var MaxChangeIndex = ProfitChange.indexOf(MaxChange);
 // STEP FIVE PART THREE - Calculate What The Previous Index Equates To In The Finances Array
 var FinancesMaxChangeIndex = MaxChangeIndex + 1;
 // STEP FIVE PART FOUR - Allocate The Biggest Change In Profits To A New Variable
-var Biggest_Profit_Change = (Finances[FinancesMaxChangeIndex][0] + " $" + MaxChange);
+var Biggest_Profit_Change = (Finances[FinancesMaxChangeIndex][0] + " (+$" + MaxChange + ")");
 
 // STEP SIX PART ONE - Find The Smallest Value In The ProfitChange Array
 var MinChange = Math.min.apply(Math, ProfitChange);
@@ -150,8 +147,15 @@ var MinChangeIndex = ProfitChange.indexOf(MinChange);
 // STEP SIX PART THREE - Calculate What The Previous Index Equates To In The Finances Array
 var FinancesMinChangeIndex = MinChangeIndex + 1;
 // STEP SIX PART FOUR - Allocate The Smallest Change In Profits To A New Variable
-var Smallest_Profit_Change = (Finances[FinancesMinChangeIndex][0]) + " $" + MinChange;
+var Smallest_Profit_Change = (Finances[FinancesMinChangeIndex][0] + " ($" + MinChange + ")");
 
-/* STEP SEVEN - Print Results Of Above Calculations To The Console */
+// STEP SEVEN - Print Results Of Above Calculations To The Console
+console.log("Financial Analysis");
+console.log("---------------------------------------------------------------------")
+console.log("Total Months In Period: " + TotalMonths);
+console.log("Net Total Amount Of Profit/Loss: $" + ProfitSum);
+console.log("Average Change In Profit/Loss: $" + AverageDifference);
+console.log("Month That Saw The Biggest Increase In Profits: " + Biggest_Profit_Change);
+console.log("Month That Saw The Biggest Decrease In Profits: " + Smallest_Profit_Change);
 
 /* STEP EIGHT - Confirm Results Are Correct */
