@@ -116,7 +116,6 @@ for (var ArrayNumber = 0; ArrayNumber < FinancesProfits.length; ArrayNumber ++ )
     ProfitSum += FinancesProfits[ArrayNumber];
 }
 
-// STEP FOUR - Figure Out A Way To Calculate The Average Change In Profit/Losses
 // STEP FOUR PART ONE - Create An Empty Array For The Changes In Profit/Loss To Go Into
 var ProfitChange = [];
 // STEP FOUR PART TWO - Create A For Loop To Identify The Profit/Loss In The Array
@@ -134,19 +133,24 @@ for (var DataNumber = 0; DataNumber < ProfitChange.length; DataNumber ++ ) {
 var AverageDifference = (ProfitChangeSum / ProfitChange.length);
 // STEP FOUR PART SEVEN - Round The Average Difference To Two Decimal Places
 AverageDifference = AverageDifference.toFixed(2);
-console.log(AverageDifference);
 
-/* STEP FIVE - Figure Out A Way To Calculate The Greatest Increase In Profit 
-   Identify By Both:
-   1) Date (Month/Year)
-   2) Amount
-*/
+// STEP FIVE PART ONE - Find The Biggest Value In The ProfitChange Array
+var MaxChange = Math.max.apply(Math, ProfitChange);
+// STEP FIVE PART TWO - Find The Index Of The Biggest Value In The ProfitChange Array
+var MaxChangeIndex = ProfitChange.indexOf(MaxChange);
+// STEP FIVE PART THREE - Calculate What The Previous Index Equates To In The Finances Array
+var FinancesMaxChangeIndex = MaxChangeIndex + 1;
+// STEP FIVE PART FOUR - Allocate The Biggest Change In Profits To A New Variable
+var Biggest_Profit_Change = (Finances[FinancesMaxChangeIndex][0] + " $" + MaxChange);
 
-/* STEP SIX - Figure Out A Way To Calculate The Greatest Decrease In Losses
-   Identify By Both:
-   1) Date (Month/Year)
-   2) Amount
-*/
+// STEP SIX PART ONE - Find The Smallest Value In The ProfitChange Array
+var MinChange = Math.min.apply(Math, ProfitChange);
+// STEP SIX PART TWO - Find The Index Of The Smallest Value On The ProfitChange Array
+var MinChangeIndex = ProfitChange.indexOf(MinChange);
+// STEP SIX PART THREE - Calculate What The Previous Index Equates To In The Finances Array
+var FinancesMinChangeIndex = MinChangeIndex + 1;
+// STEP SIX PART FOUR - Allocate The Smallest Change In Profits To A New Variable
+var Smallest_Profit_Change = (Finances[FinancesMinChangeIndex][0]) + " $" + MinChange;
 
 /* STEP SEVEN - Print Results Of Above Calculations To The Console */
 
