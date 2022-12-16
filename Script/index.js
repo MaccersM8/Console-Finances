@@ -118,11 +118,21 @@ for (var ArrayNumber = 0; ArrayNumber < FinancesProfits.length; ArrayNumber ++ )
 
 /* STEP FOUR - Figure Out A Way To Calculate The Average Change In Profit/Losses 
    Manual Way Of Working It Out:
-   1) Calculate The Difference Between Each Field
-   2) Store This Information Somewhere
-   3) Add Up All The Differences In Profit/Losses
    4) Divide By The Total Amount Of Losses
 */
+// STEP FOUR PART ONE - Create An Empty Array For The Changes In Profit/Loss To Go Into
+var ProfitChange = [];
+// STEP FOUR PART TWO - Create A For Loop To Identify The Profit/Loss In The Array
+for (var ArrayNumber = 1; ArrayNumber < FinancesProfits.length; ArrayNumber ++ ) {
+    // STEP FOUR PART THREE - Calculate And Push The Difference Of Profit/Losses Into New Array
+    ProfitChange.push(FinancesProfits[ArrayNumber] - FinancesProfits[ArrayNumber - 1]);
+}
+// STEP FOUR PART FOUR - Create A Variable For The Sum Of Profit/Loss Changes
+var ProfitChangeSum = 0;
+// STEP FOUT PART FIVE - Create A For Loop To Add Up The Differences In Profit/Losses
+for (var DataNumber = 0; DataNumber < ProfitChange.length; DataNumber ++ ) {
+    ProfitChangeSum += ProfitChange[DataNumber];
+}
 
 /* STEP FIVE - Figure Out A Way To Calculate The Greatest Increase In Profit 
    Identify By Both:
